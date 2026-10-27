@@ -1,0 +1,1232 @@
+/*تنسيق الصفحة*/
+body {
+    font-family: Arial, sans-serif;
+    background-color: #EAF4FF;
+    color: #222222;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/*الواجهة الرئيسية*/
+header {
+    padding: 80px 20px;
+}
+
+/*العنوان الرئيسي*/
+h1 {
+    color: #7F1D3F;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/*العبارة الثانوية*/
+.subtitle {
+    color: #7F1D3F;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/*وصف الموقع*/
+.description {
+    color: #222222;
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 650px;
+    margin: 0 auto 30px;
+}
+
+/*الزر*/
+button {
+    background-color: #7F1D3F;
+    color: #FFFFFF;
+    border: 2px solid #D4AF37;
+    padding: 14px 30px;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/*التاثير عند المرور فوق مؤشر الزر*/
+button:hover {
+    background-color: #D4AF37;
+    color: #222222;
+    transform: translateY(-3px);
+}
+
+/*صفحة العرض على الموبايل*/
+@media (max-width: 600px) {
+    header {
+        padding: 50px 18px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .subtitle {
+        font-size: 21px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+}
+
+/*شريط التنقل*/
+.navbar {
+    background-color: #7F1D3F;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 6%;
+    border-bottom: 4px solid #D4AF37;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+/*اسم الموقع*/
+.logo {
+    color: #FFFFFF;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/*قائمة الروابط*/
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    margin: 0;
+    padding: 0;
+}
+
+/*شكل الروابط*/
+.nav-links a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+/*الرابط الحالي عند فتح الصفحة الرئيسية*/
+.nav-links a.active {
+    color: #D4AF37;
+    font-weight: bold;
+    border-bottom: 2px solid #D4AF37;
+    padding-bottom: 5px;
+}
+
+/*عند مرور المؤشر فوق الروابط*/
+.nav-links a:hover {
+    color: #D4AF37;
+}
+
+/*ترتيب الشريط على الشاشات الصفيرة*/
+@media (max-width: 650px) {
+    .navbar {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+}
+
+/*صفحة الفعاليات*/
+.events-page {
+    padding: 40px 6%;
+    text-align: center;
+}
+
+.events-page h1 {
+    color: #7F1D3F;
+}
+
+.events-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.event-card {
+    background-color: #f9f8f6;
+    border: 2px solid #D4AF37;
+    border-radius: 12px;
+    padding: 25px;
+    width: 260px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.event-card h2 {
+    color: #7F1D3F;
+}
+
+.event-card p {
+    color: #222222;
+    line-height: 1.7;
+}
+
+.event-button {
+    display: inline-block;
+    background-color: #7F1D3F;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 10px 18px;
+    border: 2px solid #D4AF37;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.event-button:hover {
+    background-color: #D4AF37;
+    color: #222222;
+}
+
+
+/* صفحة تفاصيل الفعالية */
+.event-details {
+    background-color: #FFFFFF;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 35px;
+    border: 2px solid #c19710;
+    border-radius: 12px;
+    text-align: right;
+    line-height: 1.8;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/*عنوان صفحة التفاصيل*/
+
+.event-details h1,
+.event-details h2 {
+    color: #7b1639;
+}
+
+/*زر العودة*/
+
+.event-details .event-button {
+    display: inline-block;
+    margin-top: 15px;
+}
+
+/*صفحة التفاصيل على الموبايل*/
+
+@media (max-width: 600px) {
+    .event-details {
+        margin: 20px 15px;
+        padding: 20px;
+    }
+}
+
+
+/* صفحة عن الموقع */
+.about-page {
+    background-color: #FFFFFF;
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 35px;
+    border: 2px solid #D4AF37;
+    border-radius: 12px;
+    text-align: right;
+    line-height: 1.9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.about-page h1,
+.about-page h2 {
+    color: #7F1D3F;
+}
+
+.about-page ul {
+    padding-right: 25px;
+}
+
+.about-page li {
+    margin-bottom: 10px;
+}
+
+/*  الصفحة على الموبايل */
+@media (max-width: 600px) {
+    .about-page {
+        margin: 20px 15px;
+        padding: 20px;
+    }
+}
+
+/* صفحة التواصل */
+.contact-page {
+    background-color: #ffffffdd;
+    max-width: 650px;
+    margin: 40px auto;
+    padding: 35px;
+    border: 2px solid #96895f;
+    border-radius: 12px;
+    text-align: right;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.contact-page h1 {
+    color: #c2275d;
+    text-align: center;
+}
+
+.contact-page > p {
+    line-height: 1.8;
+    text-align: center;
+}
+
+.contact-page form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.contact-page label {
+    font-weight: bold;
+    color: #7F1D3F;
+}
+
+.contact-page input,
+.contact-page textarea {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    padding: 12px;
+    border: 1px solid #ccccccfc;
+    border-radius: 7px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.contact-page input:focus,
+.contact-page textarea:focus {
+    outline: 2px solid #ceab36;
+}
+
+.contact-page button {
+    margin-top: 10px;
+    background-color: #7F1D3F;
+    color: #FFFFFF;
+    border: 2px solid #7F1D3F;
+    border-radius: 8px;
+    padding: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact-page button:hover {
+    background-color: #D4AF37;
+    border-color: #D4AF37;
+    color: #222222;
+}
+
+#formMessage {
+    color: #7F1D3F;
+    font-weight: bold;
+}
+
+/*  صفحة التواصل على الموبايل */
+@media (max-width: 600px) {
+    .contact-page {
+        margin: 20px 15px;
+        padding: 20px;
+    }
+}
+
+.event-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* خريطة موقع الفعالية */
+.event-map {
+    margin: 30px 0;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.event-map h2 {
+    color: #7F1D3F;
+    margin-bottom: 15px;
+}
+
+#mapLocation {
+    color: #222222;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.campus-map {
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px;
+    border: 2px solid #D4AF37;
+}
+
+/* الفعاليات ذات الصلة */
+.related-events {
+    margin: 35px 0;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.related-events h2 {
+    color: #7F1D3F;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.related-events-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 200px));
+    gap: 15px;
+}
+
+.related-event-card {
+    background-color: #EAF4FF;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #D4AF37;
+    transition: transform 0.3s ease;
+}
+
+.related-event-card:hover {
+    transform: translateY(-5px);
+}
+
+.related-event-card img {
+    width: 100%;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.related-event-card h3 {
+    color: #7F1D3F;
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.related-event-card p {
+    color: #222222;
+    font-size: 14px;
+}
+
+.related-event-card a {
+    display: inline-block;
+    background-color: #7F1D3F;
+    color: white;
+    text-decoration: none;
+    padding: 9px 16px;
+    border-radius: 8px;
+    margin-top: 8px;
+}
+
+.related-event-card a:hover {
+    background-color: #5e152e;
+}
+
+/* معرض صور الفعالية */
+.photo-gallery {
+    margin: 35px 0;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.photo-gallery h2 {
+    color: #7F1D3F;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 26px;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.gallery-container img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid #D4AF37;
+    transition: transform 0.3s ease;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.04);
+}
+
+/* تنسيق المعرض على الشاشات المتوسطة */
+@media (max-width: 768px) {
+    .gallery-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* تنسيق المعرض على شاشات الجوال */
+@media (max-width: 480px) {
+    .photo-gallery {
+        padding: 15px;
+    }
+
+    .gallery-container {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-container img {
+        height: 220px;
+    }
+}
+
+/*زر اكتشف الفعاليات*/
+.explore-btn {
+    display: inline-block;
+    background-color: #7F1D3F;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    border: 2px solid #D4AF37;
+    transition: all 0.3s ease;
+}
+
+.explore-btn:hover {
+    background-color: #5e152e;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/*شعار الجامعة في الشريط*/
+.navbar-logo {
+    width: 100px;
+    height: 60px;
+    object-fit: contain;
+    background-color: #ffffff;
+    border-radius: 0;
+    padding: 3px;
+}
+
+.navbar-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #ffffff !important;
+}
+
+/*شعار الجامعة كعلامة مائية*/
+body {
+    position: relative;
+    isolation: isolate;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url("../img/logo.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100vw 100vh;
+    opacity: 0.14;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* قسم الفعاليات البارزة بحجم صغير وعلى اليمين */
+.featured-events {
+    padding: 10px 15px;
+    text-align: right;
+    width: 300px;
+    max-width: 100%;
+    margin: 0 0 0 auto;
+}
+
+.featured-events h2 {
+    color: #7F1D3F;
+    font-size: 20px;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+.featured-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.featured-card {
+    display: grid;
+    grid-template-columns: 65px minmax(0, 1fr);
+    gap: 8px;
+    align-items: center;
+    padding: 8px;
+    text-align: right;
+}
+
+.featured-card img {
+    grid-column: 1;
+    grid-row: 1 / 4;
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.featured-card h3 {
+    grid-column: 2;
+    margin: 0 0 5px;
+    font-size: 16px;
+}
+
+.featured-card p {
+    grid-column: 2;
+    margin: 0 0 6px;
+    font-size: 13px;
+}
+
+.featured-card a {
+    grid-column: 2;
+    justify-self: start;
+    margin-top: 0;
+}
+
+.featured-card {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.10);
+    padding-bottom: 12px;
+    transition: transform 0.3s ease;
+}
+
+.featured-card:hover {
+    transform: translateY(-3px);
+}
+
+.featured-card img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    display: block;
+}
+
+.featured-card h3 {
+    color: #7F1D3F;
+    font-size: 16px;
+    margin: 12px 8px 6px;
+}
+
+.featured-card p {
+    color: #222222;
+    font-size: 13px;
+    padding: 0 8px;
+    line-height: 1.6;
+}
+
+.featured-card a {
+    display: inline-block;
+    background-color: #7F1D3F;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 13px;
+    padding: 6px 14px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.featured-card a:hover {
+    background-color: #5E142E;
+}
+
+@media (max-width: 700px) {
+    .featured-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .featured-events {
+        padding: 20px 15px;
+    }
+}
+
+@media (max-width: 400px) {
+    .featured-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* تنسيق الصفحة الرئيسية*/
+/* مساحة الصفحة الرئيسية: الترحيب بالوسط، والفعاليات والتصنيفات على اليمين */
+.home-top {
+    position: relative;
+    display: block;
+    min-height: 660px;
+    padding: 20px;
+    direction: rtl;
+    box-sizing: border-box;
+}
+
+/* الترحيب يبقى في منتصف المساحة */
+.home-welcome {
+    direction: rtl;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% - 340px);
+    max-width: 750px;
+    min-height: 400px;
+    margin: 0 auto;
+    padding: 50px 10px;
+    box-sizing: border-box;
+}
+
+/* الفعاليات البارزة في أعلى اليمين */
+.home-top .featured-events {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 300px;
+    max-width: 300px;
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+    direction: rtl;
+    text-align: right;
+}
+
+.home-top .featured-events h2 {
+    color: #7F1D3F;
+    font-size: 19px;
+    margin: 10px 0 12px;
+}
+
+.home-top .featured-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.home-top .featured-card {
+    display: grid;
+    grid-template-columns: 60px minmax(0, 1fr);
+    gap: 8px;
+    align-items: center;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.10);
+    padding: 7px;
+    text-align: right;
+    transition: transform 0.3s ease;
+}
+
+.home-top .featured-card:hover {
+    transform: translateY(-3px);
+}
+
+.home-top .featured-card img {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.home-top .featured-card h3 {
+    grid-column: 2;
+    color: #7F1D3F;
+    font-size: 14px;
+    margin: 0 0 5px;
+}
+
+.home-top .featured-card a {
+    grid-column: 2;
+    justify-self: start;
+    display: inline-block;
+    background-color: #7F1D3F;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 5px;
+    margin: 0;
+}
+
+.home-top .featured-card a:hover {
+    background-color: #5E142E;
+}
+
+/* التصنيفات أسفل البطاقات: مربعان في كل صف */
+.home-top .quick-categories {
+    position: absolute;
+    top: 450px;
+    right: 20px;
+    width: 300px;
+    max-width: 300px;
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    direction: rtl;
+}
+
+.home-top .quick-categories h2 {
+    color: #222222;
+    font-size: 17px;
+    margin: 0 0 12px;
+}
+
+.home-top .quick-categories .category-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.home-top .quick-categories .category-button {
+    width: 100%;
+    height: 42px;
+    min-height: 42px;
+    margin: 0;
+    padding: 5px 4px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    font-size: 13px;
+    border: 2px solid #D4AF37;
+    border-radius: 9px;
+    background-color: #7F1D3F;
+    color: #FFFFFF;
+}
+
+.home-top .quick-categories .category-button:hover {
+    background-color: #D4AF37;
+    color: #222222;
+}
+
+/* فقاعات الصور على يسار الصفحة */
+.event-gallery {
+    position: absolute;
+    left: 20px;
+    top: 170px;
+    width: 110px;
+    padding: 0;
+    direction: ltr;
+    z-index: 1;
+}
+
+.event-gallery-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+}
+
+.event-gallery-grid img {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #D4AF37;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.18);
+    margin-bottom: -15px;
+}
+
+.event-gallery-grid img:nth-child(2) {
+    margin-left: 18px;
+}
+
+.event-gallery-grid img:nth-child(3) {
+    margin-left: 4px;
+}
+
+.event-gallery-grid img:nth-child(4) {
+    margin-left: 20px;
+}
+
+  /*تذليل الصفحة*/
+
+.site-footer {
+    position: relative;
+    z-index: 2;
+    flex-shrink: 0;
+    clear: both;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #7F1D3F;
+    color: #FFFFFF;
+    padding: 18px 15px;
+    margin-top: auto;
+    direction: rtl;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-contact,
+.footer-bottom,
+.footer-social {
+    flex: 1;
+    min-width: 0;
+}
+
+.footer-contact {
+    text-align: right;
+    overflow-wrap: anywhere;
+}
+
+.footer-bottom {
+    text-align: center;
+    border: none;
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.footer-social {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 13px;
+}
+
+.site-footer a {
+    color: #FFFFFF;
+    text-decoration: none;
+    margin: 0;
+}
+
+.site-footer a:hover {
+    color: #D4AF37;
+    text-decoration: underline;
+}
+
+/* اجعل الفوتر أسفل المحتوى القصير */
+html,
+body {
+    min-height: 100%;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+body > .home-top {
+    flex: 1 0 auto;
+}
+
+/* الشاشات المتوسطة والصغيرة */
+@media (max-width: 900px) {
+    .home-top {
+        min-height: 0;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+    }
+
+    .home-welcome {
+        width: 100%;
+        max-width: 750px;
+        min-height: 280px;
+        margin: 0 auto;
+        padding: 35px 15px;
+    }
+
+    .home-top .featured-events,
+    .home-top .quick-categories {
+        position: static;
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .home-top .featured-events {
+        padding: 10px;
+    }
+
+    .home-top .featured-container {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .home-top .quick-categories .category-buttons {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .event-gallery {
+        position: static;
+        width: 100%;
+        padding: 10px 15px 25px;
+        box-sizing: border-box;
+    }
+
+    .event-gallery-grid {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .event-gallery-grid img {
+        width: 70px;
+        height: 70px;
+        margin: 0 !important;
+    }
+}
+
+@media (max-width: 700px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .footer-contact,
+    .footer-bottom,
+    .footer-social {
+        text-align: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-top .featured-container {
+        grid-template-columns: 1fr;
+    }
+
+    .home-welcome h1 {
+        font-size: 28px;
+    }
+
+    .home-welcome .subtitle {
+        font-size: 21px;
+    }
+
+    .home-welcome .description {
+        font-size: 16px;
+    }
+}
+
+/* تنسيق جدول فريق العمل */
+.team-section {
+    width: 60%;
+    max-width: 600px;
+    margin: 10px auto 20px;
+    text-align: center;
+}
+
+.team-section h2 {
+    color: #7F1D3F;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.team-description {
+    color: #222222;
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+.team-table-wrapper {
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    overflow-x: auto;
+    box-shadow: 0 5px 18px rgba(127, 29, 63, 0.12);
+    border: 1px solid #D4AF37;
+}
+
+.team-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 0;
+}
+
+.team-table th {
+    background-color: #7F1D3F;
+    color: #FFFFFF;
+    padding: 10px 8px;
+    font-size: 13px;
+    border-bottom: 3px solid #D4AF37;
+    white-space: nowrap;
+}
+
+.team-table td {
+    padding: 10px 8px;
+    color: #222222;
+    font-size: 13px;
+    border-bottom: 1px solid #E8DDBF;
+}
+
+.team-table tbody tr:nth-child(even) {
+    background-color: #F7F2F4;
+}
+
+.team-table tbody tr:nth-child(odd) {
+    background-color: #FFFFFF;
+}
+
+.team-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.team-table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.team-table tbody tr:hover {
+    background-color: #F4E8CF;
+}
+
+@media (max-width: 600px) {
+    .team-section {
+        width: 95%;
+        margin: 35px auto;
+    }
+
+    .team-section h2 {
+        font-size: 24px;
+    }
+
+    .team-table th,
+    .team-table td {
+        padding: 13px 10px;
+        font-size: 13px;
+    }
+}
+
+/* زر الوضع الداكن */
+.dark-mode-button {
+    background-color: #7F1D3F;
+    color: white;
+    border: 2px solid #D4AF37;
+    border-radius: 8px;
+    padding: 8px 14px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.dark-mode-button:hover {
+    background-color: #D4AF37;
+    color: #222;
+}
+
+/* ألوان الوضع الداكن */
+body.dark-mode {
+    background-color: #181820;
+    color: #F1F1F1;
+}
+
+body.dark-mode .contact-page,
+body.dark-mode .about-page,
+body.dark-mode .event-details,
+body.dark-mode .event-map,
+body.dark-mode .related-events,
+body.dark-mode .team-section,
+body.dark-mode .team-table-wrapper {
+    background-color: #262630;
+    color: #F1F1F1;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p,
+body.dark-mode label,
+body.dark-mode li,
+body.dark-mode td,
+body.dark-mode th {
+    color: #F1F1F1;
+}
+
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+    background-color: #30303B;
+    color: #FFFFFF;
+    border-color: #777777;
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+    color: #CCCCCC;
+}
+
+body.dark-mode .event-card,
+body.dark-mode .card {
+    background-color: #262630;
+    color: #F1F1F1;
+    border-color: #555555;
+}
+
+body.dark-mode a {
+    color: #E8C85A;
+}
+
+body.dark-mode .navbar {
+    background-color: #111116;
+}
+
+body.dark-mode .dark-mode-button {
+    background-color: #D4AF37;
+    color: #222222;
+}
