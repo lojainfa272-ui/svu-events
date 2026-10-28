@@ -1,3 +1,4 @@
+/*التحقق من نموذج التواصل*/
 const contactForm = document.getElementById("contactForm");
 const formMessage = document.getElementById("formMessage");
 
@@ -39,6 +40,7 @@ if (contactForm) {
         contactForm.reset();
     });
 }
+/*بيانات الفعاليات*/
 
 const events = {
     programming: {
@@ -73,6 +75,8 @@ const events = {
         description: "روح رياضية، إصرارٌ بلا حدود، وتحدٍّ يحدد من هو البطل الحقيقي."
     }
 };
+
+/*عرض تفاصيل الفعالية المحددة*/
 
 const eventTitle = document.getElementById("eventTitle");
 
@@ -145,6 +149,8 @@ if (mapLocation) {
     }
 }
 
+/*تصفية الفعاليات حسب البحث والتصنيف والمكان والتاريخ*/
+
 const searchInput = document.getElementById("searchInput");
 const categoryFilter = document.getElementById("categoryFilter");
 const locationFilter = document.getElementById("locationFilter");
@@ -211,6 +217,8 @@ if (searchInput && categoryFilter && locationFilter && dateFilter) {
     
 }
 
+/*مشاركة الفعالية*/
+
 const shareEventButton = document.getElementById("shareEventButton");
 const shareMessage = document.getElementById("shareMessage");
 
@@ -239,6 +247,8 @@ if (shareEventButton && shareMessage) {
         }
     });
 }
+
+/*اضافة الفعالية إلى التقويم*/
 
 const calendarButton = document.getElementById("calendarButton");
 const calendarMessage = document.getElementById("calendarMessage");
@@ -316,6 +326,7 @@ if (calendarButton && calendarMessage) {
             "تم اضافة الفعالية للتقويم. افتح الملف الذي تم تنزيله لإضافتها إلى تقويمك.";
     });
 }
+/*الفعاليات ذات الصلة*/
 
 const relatedEventsContainer = document.getElementById("relatedEvents");
 
@@ -341,6 +352,7 @@ if (relatedEventsContainer && typeof events !== "undefined") {
         relatedEventsContainer.appendChild(eventCard);
     }
 }
+/*اظهار وإخفاء معرض الصور*/
 
 const toggleGallery = document.getElementById("toggleGallery");
 const photoGallery = document.getElementById("photoGallery");
